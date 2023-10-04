@@ -6,6 +6,8 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
+var cors=require("cors")
+
 
 dotenv.config();
 connectDB();
@@ -17,6 +19,7 @@ app.use(express.json()); // to accept json data
 //   res.send("API Running!");
 // });
 
+app.use(cors())
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
