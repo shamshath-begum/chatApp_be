@@ -12,7 +12,7 @@
     "socket.io": "^4.7.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "engine": { "node": ">=16.20.1" }
 }
